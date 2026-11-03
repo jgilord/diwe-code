@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ristorante Joseda - Prueba Inicial</title>
+  <link rel="stylesheet" href="../src/style.css">
+  <link rel="icon" href="../public/logo.svg" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <a class="header-title" href="../">
+      <img src="../public/logo.svg" alt="" class="header-icon">
+      <h1 class="header-text">Ristorante Joseda</h1>
+    </a>
+    <nav class="header-nav">
+      <ul class="header-list">
+        <li><a href="../" class="header-nav-element">Inicio</a></li>
+        <li><a href="../carta" class="header-nav-element">Carta</a></li>
+        <li><a href="../nosotros" class="header-nav-element">Sobre Nosotros</a></li>
+        <li><a href="../contacto" class="header-nav-element nav-selected">Contacto</a></li>
+        <li><a href="../visita" class="header-nav-element-important">Visitanos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Parte principal de la web -->
+  <main>
+    <section class="section">
+      <h4>Contacto</h4>
+    <p>Email: 41006948.edu@juntadeandalucia.es<br>Teléfono: 955 623 877</p>
+      <div class="contact">
+        <form class="form-contact">
+          <label for="contact-name">Nombre</label>
+          <input type="text" name="" id="contact-name" required>
+
+          <label for="contact-surname">Apellidos</label>
+          <input type="text" name="" id="contact-surname" required>
+          
+          <label for="contact-mail">Email</label>
+          <input type="email" name="" id="contact-mail" required>
+
+          <label for="contact-category">Categoría</label>
+          <select name="" id="contact-category" required>
+            <option value="1">Reserva</option>
+            <option value="1">Pregunta</option>
+            <option value="1">Sugerencia</option>
+            <option value="1">Cocina</option>
+            <option value="1">Limpieza</option>
+            <option value="1">Camareros</option>
+            <option value="1">Mesas</option>
+          </select>
+          
+          <label for="contact-message">Mensaje</label>
+          <textarea name="" id="contact-message" required></textarea>
+
+          <button class="contact-send">Enviar</button>
+        </form>
+        <img src="../public/background.jpg" alt="">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-logo">
+      <img src="../public/logo.svg" alt="" class="footer-logo-icon">
+      <h1 class="footer-logo-text">Ristorante Joseda</h1>
+      <span class="footer-logo-copy">© José David Gil - Diseño de interfaces Web - 2º DAW 2026</span>
+    </div>
+
+  </footer>
+</body>
+</html>

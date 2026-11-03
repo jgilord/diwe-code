@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  /* Medidas totales con margen y padding incluido */
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+}
+
+.container {
+  border: 1px solid limegreen;
+  margin: auto;
+  background-color: aqua;
+  color: black;
+  width: 600px;
+  height: 400px;
+
+  display: flex;
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+
+  /* Flex direction + wrap */
+  /* flex-flow: row wrap; */
+
+  /* space-around para margenes igual a todos los hijos a la izquierda y derecha */
+  /* justify-content: space-around; */
+
+  /* space-around para margenes igual a todos los hijos sin sumar intermedios */
+  /* justify-content: space-evenly; */
+  /* align-items: center; */
+
+  /* Alinear todas las filas o columnas */
+  /* align-content: flex-start; */
+
+}
+
+.item {
+  /* border: 1px solid limegreen; */
+  width: 100px;
+  height: 100px;
+  display: flex;
+
+  /* Permitir que el elemento crezca respecto al padre. Default: 0 */
+  flex-grow: 1;
+
+  /* Alineación en el eje principal */
+  justify-content: center;
+
+  /* Alineación en el eje secundario */
+  align-items: center;
+}
+
+.item1 {
+  background-color: crimson;
+
+  /* Alineación del propio elemento */
+  /* align-self: flex-end; */
+  /* justify-self: flex-end; */
+
+  /* Orden de aparición. Default: 0 */
+  /* order: 1; */
+}
+.item2 {
+  background-color: darkgoldenrod;
+
+  /* Flex Grow en items para modificarlo en uno en concreto. Default: 1 */
+  flex-grow: 2;
+}
+.item3 {
+  background-color: darkorchid;
+
+  /* Flex Shrink que no se hagan pequeños por el padre. Default: 1 */
+  /* flex-shrink: 0; */
+}
+.item4 {
+  background-color: darkcyan;
+}
