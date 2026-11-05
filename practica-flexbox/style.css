@@ -1,0 +1,244 @@
+/* Fuente que he visto parecidilla en google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+}
+
+body {
+  /* He cogido los colores de la imagen para que sean iguales */
+  background-color: #181f2a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header, main, footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background-color: #1c2431;
+}
+
+main {
+  gap: 120px;
+  padding: 0 0 60px 0;
+}
+
+footer {
+  background-color: #0b1523;
+}
+
+.contenido {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.contenido-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 0;
+}
+
+.header-logo {
+  max-width: 100px;
+}
+
+.header-nav {
+  display: flex;
+  gap: 1rem;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seccion-principal-curva {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  user-select: none;
+}
+
+.seccion-principal-img {
+  width: 100%;
+  max-width: 500px;
+  z-index: 1;
+}
+
+.seccion-principal {
+  flex-direction: column;
+}
+
+.seccion-principal-imagenes {
+  width: 100%;
+  padding: 60px 0 0 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: #1c2431;
+  margin-bottom: 120px;
+}
+
+.contenido-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 50px;
+  }
+  p {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  button {
+    border: 0;
+    outline: 0;
+    padding: 16px 80px;
+    /* Le pongo doble background por si algun navegador no tiene lo del linear gradient que yo sepa es importante */
+    background-color: black;
+    background: linear-gradient(to right, black, #fdbfca);
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+.contenido-servicios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  /* Este lo he buscado en google porque no sabia como hacer la separacion entre las filas. */
+  row-gap: 40px;
+}
+
+.servicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Este lo he buscado tmb para hacer que solo aparezcan 2 por fila. */
+  max-width: calc(50% - 12px);
+  text-align: center;
+  h4 {
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+.servicio-imagen {
+  height: 130px;
+  width: 110px;
+  display: flex;
+  align-items: center;
+  img {
+    width: 100%;
+    height: fit-content;
+  }
+}
+
+.contenido-productivo {
+  display: flex;
+  gap: 70px;
+}
+
+.contenido-productivo-imagen {
+  width: calc(50% - 35px);
+  max-width: 500px;
+  height: fit-content;
+}
+
+.contenido-productivo-texto {
+  width: calc(50% - 35px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  h3 {
+    font-size: 32px;
+    font-weight: 600;
+  }
+}
+
+.contenido-productivo-boton {
+  display: flex;
+  gap: 8px;
+  padding: 8px 0;
+  width: fit-content;
+  border-bottom: 1px solid #62e0d9;
+  p {
+    color: #62e0d9;
+  }
+}
+
+.seccion-notas-comillas {
+  height: 32px;
+}
+
+.notas {
+  display: flex;
+  gap: 50px;
+}
+
+.nota {
+  background-color: #202a3c;
+  padding: 24px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  /* Esto para la sombra que tiene que se ve poco pero esta, he buscado y es el offset de x el de y el blur y el color */
+  box-shadow: 1px 1px 5px #222934;
+}
+
+.avatar {
+  display: flex;
+  gap: 18px;
+}
+
+.avatar-imagen {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.avatar-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  h6 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 14px;
+  }
+  p {
+    font-size: 12px;
+    line-height: 12px;
+    color: #959595;
+  }
+}
