@@ -1,6 +1,14 @@
 /* Fuente que he visto parecidilla en google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+/* He ido haciendo la practica con la foto que nos has pasado abierta en un programa de fotos */
+/* Asi he ido sacando los colores que tienen cada seccion y eso ademas de ir midiendo todos los margenes */
+/* y lo que ocupa cada contenedor y eso, para hacerlo lo más parecido posible */
+
+/* Yo por mi parte he visto mucho CSS por mi cuenta */
+/* Seguramente la mitad de cosas las haga de formas que no son correctas del todo pero bueno es lo que sé */
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -12,7 +20,6 @@
 }
 
 body {
-  /* He cogido los colores de la imagen para que sean iguales */
   background-color: #181f2a;
   display: flex;
   flex-direction: column;
@@ -31,24 +38,30 @@ header {
   background-color: #1c2431;
 }
 
+a {
+  text-decoration: none;
+}
+
 main {
   gap: 120px;
-  padding: 0 0 60px 0;
-}
-
-footer {
-  background-color: #0b1523;
-}
-
-.contenido {
-  width: 100%;
-  max-width: 1200px;
 }
 
 .contenido-header {
   display: flex;
   justify-content: space-between;
   padding: 60px 0;
+}
+
+/* Esta clase es un poco rara pero es para un div que tienen todas las secciones */
+/* Lo he hecho asi porque necesito que la seccion primera de todas que tiene la imagen de fondo curva esa */
+/* tenga el ancho completo, y la ultima de todas que le pilla el fondo asi entre medias */
+/* Es la forma que se me ha ocurrido nose */
+.contenido {
+  width: 100%;
+  /* El padding inline lo he puesto para que cuando se estreche la web completa no quede el contenido pegado a los bordes */
+  padding-inline: 60px;
+  /* Max width he visto en la foto que son 1200px pero le voy a sumar lo del padding inline 1200+120 */
+  max-width: 1320px;
 }
 
 .header-logo {
@@ -140,6 +153,7 @@ section {
   flex-direction: column;
   align-items: center;
   /* Este lo he buscado tmb para hacer que solo aparezcan 2 por fila. */
+  /* Se calcula el 50% del contenedor padre quitando los 12px de gap que le tocan. Como son 2 pues cada uno 12px de los 24 que tiene el gap */
   max-width: calc(50% - 12px);
   text-align: center;
   h4 {
@@ -162,6 +176,7 @@ section {
 
 .contenido-productivo {
   display: flex;
+  justify-content: center;
   gap: 70px;
 }
 
@@ -240,5 +255,152 @@ section {
     font-size: 12px;
     line-height: 12px;
     color: #959595;
+  }
+}
+
+.seccion-contacto {
+  /* He investigado como poner una mitad del fondo de un color y otra de otro y se supone que asi se hace y funciona asi que perfecto */
+  background: linear-gradient(to bottom, #181f2a 50%, #0b1523 51%);
+}
+
+.contenido-contacto {
+  border-radius: 8px;
+  background-color: #202a3c;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 24px;
+  h5 {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+}
+
+.form-contacto {
+  display: flex;
+  height: 50px;
+  gap: 18px;
+  input {
+    /* Flex grow para que crezca todo el espacio que le queda */
+    flex-grow: 1;
+    border: 0;
+    outline: 0;
+    border-radius: 30px;
+    font-size: 16px;
+    padding: 20px;
+    font-weight: 400;
+    color: black;
+  }
+  button {
+    border: 0;
+    outline: 0;
+    width: 200px;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #c0c0c0;
+    background-color: #65e2d9;
+    background: linear-gradient(to right, #65e2d9, #349fcc);
+  }
+}
+
+footer {
+  padding: 100px 0 60px;
+  background-color: #0b1523;
+}
+
+.contenido-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.logo-footer {
+  width: 200px;
+}
+
+.secciones-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.secciones-footer-about {
+  display: flex;
+  max-width: 290px;
+  gap: 16px;
+  img {
+    height: fit-content;
+  }
+}
+
+.secciones-footer-enlaces {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  div {
+    display: flex;
+    gap: 16px;
+    img {
+      height: fit-content;
+    }
+  }
+}
+
+.secciones-footer-rrss {
+  display: flex;
+  gap: 16px;
+  a {
+    display: flex;
+    padding: 8px;
+    border: 1px solid white;
+    height: fit-content;
+    border-radius: 100%;
+  }
+}
+
+/* He metido lo del @media para poner wrap en algunos contenedor y que se vea mejor en pantallas mas pequeñas */
+/* Lo que he hecho es ir haciendo la pantalla menos ancha hasta que he visto que se ve raro y he metido los cambios */
+/* Que he visto necesario en las clases necesarias */
+@media (max-width: 930px) {
+  .contenido-servicios, .contenido-productivo {
+    flex-wrap: wrap;
+  }
+  .contenido-productivo-texto {
+    width: 100%;
+    max-width: none;
+  }
+  .contenido-productivo-imagen {
+    width: 100%;
+    max-width: 400px;
+  }
+  .servicio {
+    max-width: none;
+  }
+  .notas {
+    flex-wrap: wrap;
+  }
+  .contenido-contacto {
+    height: auto;
+    padding: 24px;
+  }
+  .form-contacto {
+    flex-wrap: wrap;
+    height: auto;
+    input, button {
+      flex-grow: 1;
+      height: 50px;
+    }
+  }
+  .secciones-footer {
+    flex-wrap: wrap;
+    row-gap: 20px;
   }
 }
