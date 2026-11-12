@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  border: 4px solid fuchsia;
+  background: seagreen;
+  width: 100%;
+  height: 500px;
+  display: grid;
+  /* Grid template para las preestablecidas */
+  /* fr para fracciones, se divide todo en el numero total de fracciones y tu le asignas las que quieras */
+  /* repeat(x, y) x las veces y y lo que se va a repetir */
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* grid-template-rows: repeat(3, 1fr); */
+  border-radius: 1rem;
+
+  /* grid-auto-rows: 1fr; */
+  /* grid-auto-columns: 1fr; */
+
+  /* Esta propiedad para que no queden huecos, uno cabe en el hueco vacio pues se mete en el */
+  grid-auto-flow: dense;
+
+  /* Gap aqui es para las 2 direcciones */
+  gap: 0.5rem;
+  padding: 0.5rem;
+
+  /* Grid auto flow para que en vez de uno al lado del otro, sea uno abajo del otro */
+  /* grid-auto-flow: column; */
+
+  grid-template-areas: 
+  "header header header sidebar"
+  "main main main sidebar"
+  "main main main sidebar"
+  "footer footer footer footer";
+}
+
+.item {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.item1 {
+  background: skyblue;
+  grid-area: header;
+}
+
+.item2 {
+  background: crimson;
+  grid-area: main;
+}
+
+.item3 {
+  background: mediumvioletred;
+  grid-area: sidebar;
+}
+
+.item4 {
+  background: darkorange;
+  grid-area: footer;
+}
+
+.item5 {
+  background: rebeccapurple;
+}
+
+.item6 {
+  background: lawngreen;
+}
